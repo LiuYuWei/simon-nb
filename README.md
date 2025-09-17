@@ -29,7 +29,7 @@ Before you begin, ensure you have the following installed:
 1.  **Clone the Repository**
 
     ```bash
-    git clone <your-repository-url>
+    git clone https://github.com/LiuYuWei/simon-nb.git
     cd simon-nb
     ```
 
@@ -50,6 +50,41 @@ Before you begin, ensure you have the following installed:
     ```bash
     pip install -e .
     ```
+
+## 環境變數設定 (`.env`)
+
+在執行代理（agent）之前，您需要設定環境變數以進行 Google Generative AI 服務的身份驗證。代理程式可以透過兩種方式進行設定：使用 Vertex AI 或使用 Google AI Studio API 金鑰。
+
+在 `adk-agent/nano-banana-agent/` 目錄中建立一個名為 `.env` 的檔案。此檔案不受 Git 追蹤，您必須手動建立。
+
+**注意：** ADK 框架會在代理啟動時自動從此 `.env` 檔案載入變數。
+
+### 方法一：使用 Vertex AI（建議）
+
+如果您已經在使用 Google Cloud，這是建議的生產環境方法。
+
+1.  請確保您已按照 **Prerequisites** 中的說明使用 gcloud CLI 進行身份驗證。
+2.  建立 `.env` 檔案，內容如下：
+
+    ```
+    GOOGLE_GENAI_USE_VERTEXAI=true
+    GOOGLE_CLOUD_PROJECT="your-gcp-project-id"
+    ```
+
+    請將 `"your-gcp-project-id"` 替換為您實際的 Google Cloud 專案 ID。
+
+### 方法二：使用 Google AI Studio API 金鑰
+
+這種方法對於快速測試和開發更為簡單。
+
+1.  從 [Google AI Studio](https://aistudio.google.com/app/apikey) 取得 API 金鑰。
+2.  建立 `.env` 檔案，內容如下：
+
+    ```
+    GOOGLE_API_KEY="your-google-api-key"
+    ```
+
+    請將 `"your-google-api-key"` 替換為您實際的 API 金鑰。
 
 ## Usage
 
