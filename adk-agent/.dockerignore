@@ -1,0 +1,5 @@
+**/*/__pycache__
+**/*.pyc
+nano-banana-agent/result
+nano-banana-agent/input
+nano-banana-agent/.env
