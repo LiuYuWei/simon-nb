@@ -51,40 +51,40 @@ Before you begin, ensure you have the following installed:
     pip install -e .
     ```
 
-## 環境變數設定 (`.env`)
+## Environment Variable Setup (`.env`)
 
-在執行代理（agent）之前，您需要設定環境變數以進行 Google Generative AI 服務的身份驗證。代理程式可以透過兩種方式進行設定：使用 Vertex AI 或使用 Google AI Studio API 金鑰。
+Before running the agent, you need to set up environment variables for authentication with Google Generative AI services. The agent can be configured in two ways: using Vertex AI or using a Google AI Studio API key.
 
-在 `adk-agent/nano-banana-agent/` 目錄中建立一個名為 `.env` 的檔案。此檔案不受 Git 追蹤，您必須手動建立。
+Create a file named `.env` in the `adk-agent/nano-banana-agent/` directory. This file is not tracked by Git, so you must create it manually.
 
-**注意：** ADK 框架會在代理啟動時自動從此 `.env` 檔案載入變數。
+**Note:** The ADK framework automatically loads variables from this `.env` file when the agent starts.
 
-### 方法一：使用 Vertex AI（建議）
+### Method 1: Using Vertex AI (Recommended)
 
-如果您已經在使用 Google Cloud，這是建議的生產環境方法。
+This is the recommended method for production environments if you are already using Google Cloud.
 
-1.  請確保您已按照 **Prerequisites** 中的說明使用 gcloud CLI 進行身份驗證。
-2.  建立 `.env` 檔案，內容如下：
+1.  Ensure you have authenticated with the gcloud CLI as described in the **Prerequisites** section.
+2.  Create the `.env` file with the following content:
 
     ```
     GOOGLE_GENAI_USE_VERTEXAI=true
     GOOGLE_CLOUD_PROJECT="your-gcp-project-id"
     ```
 
-    請將 `"your-gcp-project-id"` 替換為您實際的 Google Cloud 專案 ID。
+    Replace `"your-gcp-project-id"` with your actual Google Cloud project ID.
 
-### 方法二：使用 Google AI Studio API 金鑰
+### Method 2: Using a Google AI Studio API Key
 
-這種方法對於快速測試和開發更為簡單。
+This method is simpler for quick testing and development.
 
-1.  從 [Google AI Studio](https://aistudio.google.com/app/apikey) 取得 API 金鑰。
-2.  建立 `.env` 檔案，內容如下：
+1.  Obtain an API key from [Google AI Studio](https://aistudio.google.com/app/apikey).
+2.  Create the `.env` file with the following content:
 
     ```
     GOOGLE_API_KEY="your-google-api-key"
     ```
 
-    請將 `"your-google-api-key"` 替換為您實際的 API 金鑰。
+    Replace `"your-google-api-key"` with your actual API key.
 
 ## Usage
 
