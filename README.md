@@ -1,4 +1,4 @@
-# Nano Banana Agent Project
+# simon-nb: Nano Banana API as Google ADK AI Agent Project
 
 This project demonstrates a complete AI agent system with a command-line interface (CLI) for interacting with a generative AI model to process and edit images.
 

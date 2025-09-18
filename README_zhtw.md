@@ -1,4 +1,4 @@
-# Nano Banana Agent 專案
+# simon-nb: Nano Banana API as Google ADK AI Agent 專案
 
 本專案展示一個完整的人工智慧代理系統，其中包含一個命令列介面（CLI），用於與生成式 AI 模型互動以處理和編輯圖像。
 
