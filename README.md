@@ -2,6 +2,8 @@
 
 This project demonstrates a complete AI agent system with a command-line interface (CLI) for interacting with a generative AI model to process and edit images.
 
+![img](./img/image_1.png)
+
 ## Architecture
 
 The project consists of three main components that run in separate Docker containers:
